@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+    client-db:
+        container_name: client-db
+        build:
+            dockerfile: ./dockerfiles/database/Dockerfile
+        tty: true
+        entrypoint: [ "sh","start-mysql.sh" ]
+        ports:
+            - "3306:3306"
+        volumes:
+            - db:/var/lib/mysql
+        networks:
+            - client-net
+    #Volume sync too slow on WSL, need real Linux
+    #client-service:
+        #container_name: client-service
+        #build:
+            #dockerfile: ./dockerfiles/service/Dockerfile
+        #tty: true
+        #restart: always
+        #volumes:
+           #- ./:/var/www/html/client-creation
+        #ports:
+            #- "8000:8000"
+        #networks:
+            #- client-net
+volumes:
+    db:
+networks:
+    client-net:
+        name: client-net
+        external: true

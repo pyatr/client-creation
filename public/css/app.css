@@ -1,0 +1,74 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+.main-content {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: grid;
+    gap: 1rem;
+}
+
+.clients-grid {
+    gap: 4rem;
+    display: grid;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.buttons-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.bottom-button {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.table-display {
+    display: grid;
+    gap: 1rem;
+}
+
+.bottom-button-current {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+a {
+    color: black;
+}
+
+td,
+th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+    width: 10rem;
+}
